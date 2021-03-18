@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\nimport * as S from './styles';\n\nvar GridWrapper = function GridWrapper(_ref) {\n  var children = _ref.children;\n  return /*#__PURE__*/_jsx(S.Wrapper, {\n    children: children\n  });\n};\n\nexport default GridWrapper;","map":null,"metadata":{},"sourceType":"module"}

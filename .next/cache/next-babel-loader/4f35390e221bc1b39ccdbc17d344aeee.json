@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled, { css } from 'styled-components';\nexport const Wrapper = styled.div.withConfig({\n  displayName: \"styles__Wrapper\",\n  componentId: \"o8a6ji-0\"\n})([\"\", \"\"], ({\n  theme\n}) => css([\"padding:0 13%;@media (max-width:\", \"){padding:0 5%;}\"], theme.breakPoints.tablet));","map":null,"metadata":{},"sourceType":"module"}

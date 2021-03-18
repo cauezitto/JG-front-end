@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var cepMask = function cepMask(e) {\n  return e.replace(/\\D/g, '');\n};","map":null,"metadata":{},"sourceType":"module"}

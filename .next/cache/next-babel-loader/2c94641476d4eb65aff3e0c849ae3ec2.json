@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\nimport * as S from './styles';\n\nconst PaddingWrapper = ({\n  children\n}) => /*#__PURE__*/_jsx(S.Wrapper, {\n  children: children\n});\n\nexport default PaddingWrapper;","map":null,"metadata":{},"sourceType":"module"}
