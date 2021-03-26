@@ -132,6 +132,8 @@ const getProductBySlug = _apollo_client__WEBPACK_IMPORTED_MODULE_0__["gql"]`
           M
           G
           GG
+          XG
+          XXG
         }
         kid {
           catorze

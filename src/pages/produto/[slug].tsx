@@ -62,8 +62,19 @@ type ProductPageProps = {
         M: boolean
         G: boolean
         GG: boolean
+        XG: boolean
+        XXG: boolean
       }
-      // kid?:
+      kid?: {
+        catorze: boolean
+        dezesseis: boolean
+        dezoito: boolean
+        vinte: boolean
+        vinte_e_dois: boolean
+        vinte_e_quatro: boolean
+        vinte_e_seis: boolean
+        vinte_e_oito: boolean
+      }
     }
     cover: {
       url: string
@@ -414,7 +425,111 @@ const Produto = ({ product, categorias, tierList }: ProductPageProps) => {
                 {/* tamanhos */}
                 <SizesWrapper>
                   {kid ? (
-                    <div>tamanho criança</div>
+                    <>
+                      {tamanho?.kid?.catorze && (
+                        <SizeButton
+                          selected={size === '14' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('14')
+                          }}
+                          color={size === 'M' ? 'white100' : 'black'}
+                        >
+                          14
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.kid?.dezesseis && (
+                        <SizeButton
+                          selected={size === '16' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('16')
+                          }}
+                          color={size === 'M' ? 'white100' : 'black'}
+                        >
+                          16
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.kid?.dezoito && (
+                        <SizeButton
+                          selected={size === '18' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('18')
+                          }}
+                          color={size === 'M' ? 'white100' : 'black'}
+                        >
+                          18
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.kid?.vinte && (
+                        <SizeButton
+                          selected={size === '20' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('20')
+                          }}
+                          color={size === 'M' ? 'white100' : 'black'}
+                        >
+                          20
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.kid?.vinte_e_dois && (
+                        <SizeButton
+                          selected={size === '22' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('22')
+                          }}
+                          color={size === 'M' ? 'white100' : 'black'}
+                        >
+                          22
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.kid?.vinte_e_quatro && (
+                        <SizeButton
+                          selected={size === '24' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('24')
+                          }}
+                          color={size === 'M' ? 'white100' : 'black'}
+                        >
+                          24
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.kid?.vinte_e_seis && (
+                        <SizeButton
+                          selected={size === '26' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('26')
+                          }}
+                          color={size === 'M' ? 'white100' : 'black'}
+                        >
+                          26
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.kid?.vinte_e_oito && (
+                        <SizeButton
+                          selected={size === '28' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('28')
+                          }}
+                          color={size === 'M' ? 'white100' : 'black'}
+                        >
+                          28
+                        </SizeButton>
+                      )}
+                    </>
                   ) : (
                     <>
                       {tamanho?.adulto?.P && (
@@ -463,6 +578,32 @@ const Produto = ({ product, categorias, tierList }: ProductPageProps) => {
                           color={size === 'GG' ? 'white100' : 'black'}
                         >
                           GG
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.adulto?.XG && (
+                        <SizeButton
+                          selected={size === 'XG' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('XG')
+                          }}
+                          color={size === 'XG' ? 'white100' : 'black'}
+                        >
+                          XG
+                        </SizeButton>
+                      )}
+
+                      {tamanho?.adulto?.XXG && (
+                        <SizeButton
+                          selected={size === 'XXG' && true}
+                          className="size-button"
+                          onClick={() => {
+                            setSize('XXG')
+                          }}
+                          color={size === 'XXG' ? 'white100' : 'black'}
+                        >
+                          XXG
                         </SizeButton>
                       )}
                     </>
@@ -596,6 +737,8 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 
   const { produtos, destaque } = data
   const { categorias } = categoriesResponse.data
+
+  // console.log(produtos[0].tamanho)
 
   return {
     props: {

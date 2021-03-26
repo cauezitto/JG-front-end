@@ -143,9 +143,11 @@ export const QuantTitle = styled.span`
 export const SizesWrapper = styled.div`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.medium};
-    justify-content: space-around;
+    /* justify-content: flex-start; */
     display: flex;
-    float: right;
+    /* align-items: center; */
+    /* float: right; */
+    flex-wrap: wrap;
 
     @media (max-width: ${theme.breakPoints.tablet}) {
       justify-content: space-between;
@@ -226,6 +228,7 @@ export const SizeButton = styled.div<SizeButtonProps>`
     width: 60px;
     height: 55px;
     border: 2px ${theme.colors.black} solid;
+    margin-top: 5px;
     cursor: pointer;
     /* font-size: ${theme.font.sizes.large}; */
 

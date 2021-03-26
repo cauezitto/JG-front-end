@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/ZvSxJ6eTcGwDmufWWSK-Y/_buildManifest.js",
-    "static/ZvSxJ6eTcGwDmufWWSK-Y/_ssgManifest.js"
+    "static/oCHCnKgOynEPqWNIB9lsV/_buildManifest.js",
+    "static/oCHCnKgOynEPqWNIB9lsV/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -186,7 +186,7 @@
       "static/chunks/8a5a74baab91f2344c9a46fcef4e7a23a90a7914.4176fc30da5abf67b882.js",
       "static/chunks/57634f1113fa690c16974ca0aab02744eae74f70.db4a94ec027b4353fc14.js",
       "static/chunks/cf8d6d706be692c6d236a8b1242b1db711480c83.bb562ec002cb165b08ab.js",
-      "static/chunks/pages/loja-1fe8a29af02820a45207.js"
+      "static/chunks/pages/loja-a51185be8932d93c8c28.js"
     ],
     "/produto/[slug]": [
       "static/chunks/main-25757af5610fdd90e1ff.js",
@@ -206,7 +206,7 @@
       "static/chunks/8a5a74baab91f2344c9a46fcef4e7a23a90a7914.4176fc30da5abf67b882.js",
       "static/chunks/cf8d6d706be692c6d236a8b1242b1db711480c83.bb562ec002cb165b08ab.js",
       "static/chunks/77c79f46f147bb41197d4265e2431436c7b458c9.ea2386f836b00a256e7b.js",
-      "static/chunks/pages/produto/[slug]-141e6b603c525e814f5f.js"
+      "static/chunks/pages/produto/[slug]-1010c72741e3f2e1dc6c.js"
     ],
     "/recuperar-senha": [
       "static/chunks/main-25757af5610fdd90e1ff.js",

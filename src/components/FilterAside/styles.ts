@@ -8,7 +8,8 @@ export const Wrapper = styled.aside<WrapperProps>`
   ${({ theme, show }) => css`
     width: 320px;
     min-height: 500px;
-    height: fit-content;
+    height: auto;
+    overflow-y: auto;
     background: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;

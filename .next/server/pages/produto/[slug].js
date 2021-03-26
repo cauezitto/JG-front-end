@@ -132,6 +132,8 @@ const getProductBySlug = _apollo_client__WEBPACK_IMPORTED_MODULE_0__["gql"]`
           M
           G
           GG
+          XG
+          XXG
         }
         kid {
           catorze
@@ -2101,7 +2103,7 @@ const SizesWrapper = external_styled_components_default.a.div.withConfig({
   componentId: "sc-1m97gw6-9"
 })(["", ""], ({
   theme
-}) => Object(external_styled_components_["css"])(["margin-top:", ";justify-content:space-around;display:flex;float:right;@media (max-width:", "){justify-content:space-between;width:100%;}"], theme.spacings.medium, theme.breakPoints.tablet));
+}) => Object(external_styled_components_["css"])(["margin-top:", ";display:flex;flex-wrap:wrap;@media (max-width:", "){justify-content:space-between;width:100%;}"], theme.spacings.medium, theme.breakPoints.tablet));
 const PersonalizationButtonSelector = external_styled_components_default.a.div.withConfig({
   displayName: "produto__PersonalizationButtonSelector",
   componentId: "sc-1m97gw6-10"
@@ -2127,7 +2129,7 @@ const SizeButton = external_styled_components_default.a.div.withConfig({
 })(["", ""], ({
   theme,
   selected
-}) => Object(external_styled_components_["css"])(["display:flex;justify-content:center;align-items:center;width:60px;height:55px;border:2px ", " solid;cursor:pointer;", ":hover{transition:250ms;border:1px ", " solid;color:", ";background-color:", ";}"], theme.colors.black, selected && Object(external_styled_components_["css"])(["background-color:", ";border-color:", ";color:", ";"], theme.colors.brown, theme.colors.brown, theme.colors.white100), theme.colors.brown, theme.colors.white100, theme.colors.brown));
+}) => Object(external_styled_components_["css"])(["display:flex;justify-content:center;align-items:center;width:60px;height:55px;border:2px ", " solid;margin-top:5px;cursor:pointer;", ":hover{transition:250ms;border:1px ", " solid;color:", ";background-color:", ";}"], theme.colors.black, selected && Object(external_styled_components_["css"])(["background-color:", ";border-color:", ";color:", ";"], theme.colors.brown, theme.colors.brown, theme.colors.white100), theme.colors.brown, theme.colors.white100, theme.colors.brown));
 const MiniCartWrapper = external_styled_components_default.a.div.withConfig({
   displayName: "produto__MiniCartWrapper",
   componentId: "sc-1m97gw6-14"
@@ -2713,7 +2715,7 @@ const Produto = ({
   categorias,
   tierList
 }) => {
-  var _tamanho$adulto, _tamanho$adulto2, _tamanho$adulto3, _tamanho$adulto4;
+  var _tamanho$kid, _tamanho$kid2, _tamanho$kid3, _tamanho$kid4, _tamanho$kid5, _tamanho$kid6, _tamanho$kid7, _tamanho$kid8, _tamanho$adulto, _tamanho$adulto2, _tamanho$adulto3, _tamanho$adulto4, _tamanho$adulto5, _tamanho$adulto6;
 
   const {
     id,
@@ -3006,8 +3008,72 @@ const Produto = ({
                   }))
                 })]
               }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizesWrapper, {
-                children: kid ? /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-                  children: "tamanho crian\xE7a"
+                children: kid ? /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
+                  children: [(tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$kid = tamanho.kid) === null || _tamanho$kid === void 0 ? void 0 : _tamanho$kid.catorze) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === '14' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('14');
+                    },
+                    color: size === 'M' ? 'white100' : 'black',
+                    children: "14"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$kid2 = tamanho.kid) === null || _tamanho$kid2 === void 0 ? void 0 : _tamanho$kid2.dezesseis) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === '16' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('16');
+                    },
+                    color: size === 'M' ? 'white100' : 'black',
+                    children: "16"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$kid3 = tamanho.kid) === null || _tamanho$kid3 === void 0 ? void 0 : _tamanho$kid3.dezoito) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === '18' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('18');
+                    },
+                    color: size === 'M' ? 'white100' : 'black',
+                    children: "18"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$kid4 = tamanho.kid) === null || _tamanho$kid4 === void 0 ? void 0 : _tamanho$kid4.vinte) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === '20' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('20');
+                    },
+                    color: size === 'M' ? 'white100' : 'black',
+                    children: "20"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$kid5 = tamanho.kid) === null || _tamanho$kid5 === void 0 ? void 0 : _tamanho$kid5.vinte_e_dois) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === '22' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('22');
+                    },
+                    color: size === 'M' ? 'white100' : 'black',
+                    children: "22"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$kid6 = tamanho.kid) === null || _tamanho$kid6 === void 0 ? void 0 : _tamanho$kid6.vinte_e_quatro) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === '24' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('24');
+                    },
+                    color: size === 'M' ? 'white100' : 'black',
+                    children: "24"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$kid7 = tamanho.kid) === null || _tamanho$kid7 === void 0 ? void 0 : _tamanho$kid7.vinte_e_seis) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === '26' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('26');
+                    },
+                    color: size === 'M' ? 'white100' : 'black',
+                    children: "26"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$kid8 = tamanho.kid) === null || _tamanho$kid8 === void 0 ? void 0 : _tamanho$kid8.vinte_e_oito) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === '28' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('28');
+                    },
+                    color: size === 'M' ? 'white100' : 'black',
+                    children: "28"
+                  })]
                 }) : /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
                   children: [(tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$adulto = tamanho.adulto) === null || _tamanho$adulto === void 0 ? void 0 : _tamanho$adulto.P) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
                     selected: size === 'P' && true,
@@ -3041,6 +3107,22 @@ const Produto = ({
                     },
                     color: size === 'GG' ? 'white100' : 'black',
                     children: "GG"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$adulto5 = tamanho.adulto) === null || _tamanho$adulto5 === void 0 ? void 0 : _tamanho$adulto5.XG) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === 'XG' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('XG');
+                    },
+                    color: size === 'XG' ? 'white100' : 'black',
+                    children: "XG"
+                  }), (tamanho === null || tamanho === void 0 ? void 0 : (_tamanho$adulto6 = tamanho.adulto) === null || _tamanho$adulto6 === void 0 ? void 0 : _tamanho$adulto6.XXG) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizeButton, {
+                    selected: size === 'XXG' && true,
+                    className: "size-button",
+                    onClick: () => {
+                      setSize('XXG');
+                    },
+                    color: size === 'XXG' ? 'white100' : 'black',
+                    children: "XXG"
                   })]
                 })
               }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
@@ -3173,7 +3255,8 @@ const getStaticProps = async ({
   } = data;
   const {
     categorias
-  } = categoriesResponse.data;
+  } = categoriesResponse.data; // console.log(produtos[0].tamanho)
+
   return {
     props: {
       product: produtos[0],

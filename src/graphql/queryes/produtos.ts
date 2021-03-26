@@ -29,6 +29,8 @@ export const getProductBySlug = gql`
           M
           G
           GG
+          XG
+          XXG
         }
         kid {
           catorze

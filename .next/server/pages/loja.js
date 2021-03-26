@@ -132,6 +132,8 @@ const getProductBySlug = _apollo_client__WEBPACK_IMPORTED_MODULE_0__["gql"]`
           M
           G
           GG
+          XG
+          XXG
         }
         kid {
           catorze
@@ -2121,7 +2123,7 @@ const styles_Wrapper = external_styled_components_default.a.aside.withConfig({
 })(["", ""], ({
   theme,
   show
-}) => Object(external_styled_components_["css"])(["width:320px;min-height:500px;height:fit-content;background:#ffffff;box-shadow:0px 4px 4px rgba(0,0,0,0.25),0px 4px 4px rgba(0,0,0,0.25);border-radius:10px;padding:", ";@media (max-width:", "){border-radius:0;transition:0.8s;padding:", ";position:fixed;z-index:10;left:-100vw;top:0;height:100vh;width:100vw;", "}"], theme.spacings.xsmall, theme.breakPoints.tablet, theme.spacings.large, show && Object(external_styled_components_["css"])(["transition:0.8s;left:0;"])));
+}) => Object(external_styled_components_["css"])(["width:320px;min-height:500px;height:auto;overflow-y:auto;background:#ffffff;box-shadow:0px 4px 4px rgba(0,0,0,0.25),0px 4px 4px rgba(0,0,0,0.25);border-radius:10px;padding:", ";@media (max-width:", "){border-radius:0;transition:0.8s;padding:", ";position:fixed;z-index:10;left:-100vw;top:0;height:100vh;width:100vw;", "}"], theme.spacings.xsmall, theme.breakPoints.tablet, theme.spacings.large, show && Object(external_styled_components_["css"])(["transition:0.8s;left:0;"])));
 const Footer = external_styled_components_default.a.footer.withConfig({
   displayName: "styles__Footer",
   componentId: "sc-565auu-1"
