@@ -5406,7 +5406,7 @@ const ProductCard = ({
         }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(ProductPrice, {
           children: handlePrice["a" /* default */].priceNumberToReadblePrice(price ? price : 0)
         }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Installments, {
-          children: `Ou então 3x de ${handlePrice["a" /* default */].priceNumberToReadblePrice((price ? price : 0) / 3)}`
+          children: `Ou então 12x de ${handlePrice["a" /* default */].priceNumberToReadblePrice((price ? price : 0) / 12)}`
         }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
           className: "cart-button",
           children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(CartButton, {

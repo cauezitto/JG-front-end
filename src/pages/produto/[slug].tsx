@@ -138,7 +138,7 @@ const Produto = ({ product, categorias, tierList }: ProductPageProps) => {
   // const [isFavorite, setIsFavorite] = useState(false)
   const [cookie, setCookie] = useCookies(['user'])
   const [showMiniCart, setShowMiniCart] = useState(false)
-
+  const [showSizes, setShowSizes] = useState(false)
   useEffect(() => {
     // alert('Aloohhh')
     if (cep.length === 8) {
@@ -311,7 +311,12 @@ const Produto = ({ product, categorias, tierList }: ProductPageProps) => {
         />
       </Head>
 
-      {/* <SizesPopUp show={true} /> */}
+      <SizesPopUp
+        onClose={() => {
+          setShowSizes(false)
+        }}
+        show={showSizes}
+      />
       <SuccessAddPopUp
         show={showSuccess}
         onClose={() => setShowSuccess(false)}
@@ -364,8 +369,8 @@ const Produto = ({ product, categorias, tierList }: ProductPageProps) => {
                 </ProductPrice>
 
                 <ProductInstallments>
-                  {`ou então 3x de ${priceHandler.priceNumberToReadblePrice(
-                    preco / 3
+                  {`ou então 12x de ${priceHandler.priceNumberToReadblePrice(
+                    preco / 12
                   )}`}
                 </ProductInstallments>
 
@@ -663,7 +668,11 @@ const Produto = ({ product, categorias, tierList }: ProductPageProps) => {
                   )}
                 </div>
                 <br />
-                <ProductReference>
+                <ProductReference
+                  onClick={() => {
+                    setShowSizes(true)
+                  }}
+                >
                   <u>Tabela de medidas</u>
                 </ProductReference>
               </ProductAside>

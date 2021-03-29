@@ -59,8 +59,8 @@ const ProductCard = ({ id, name, image, price, slug }: ProductProps) => {
           <S.ProductPrice>
             {priceHandler.priceNumberToReadblePrice(price ? price : 0)}
           </S.ProductPrice>
-          <S.Installments>{`Ou então 3x de ${priceHandler.priceNumberToReadblePrice(
-            (price ? price : 0) / 3
+          <S.Installments>{`Ou então 12x de ${priceHandler.priceNumberToReadblePrice(
+            (price ? price : 0) / 12
           )}`}</S.Installments>
           <div className="cart-button">
             <S.CartButton role="button">ADD CARRINHO</S.CartButton>

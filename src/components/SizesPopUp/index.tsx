@@ -13,21 +13,9 @@ export type Props = {
 const SizesPopUp = (props: Props) => (
   <S.Wrapper {...props}>
     <S.SubWrapper>
-      <FaHeart size={45} color="#E4271B" />
-      <Image
-        layout="responsive"
-        width={500}
-        height={250}
-        src="/img/ProductPage/sizes.jpeg"
-      />
-      <Paragraph
-        fontSize="large"
-        font="ubuntu"
-        textAlign="center"
-        margin="30px 0"
-      >
-        Parabéns! você adicionou o produto a sua lista de desejos
-      </Paragraph>
+      <img className="sizes-photo" src="/img/ProductPage/sizes.jpeg" />
+      <br />
+      <br />
       <Button onClick={props.onClose} fontSize="large">
         Beleza
       </Button>

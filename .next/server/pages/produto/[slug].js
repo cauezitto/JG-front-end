@@ -2665,6 +2665,48 @@ const MiniCart = ({
 var head_ = __webpack_require__("xnum");
 var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 
+// CONCATENATED MODULE: ./src/components/SizesPopUp/styles.ts
+
+const SizesPopUp_styles_Wrapper = external_styled_components_default.a.div.withConfig({
+  displayName: "styles__Wrapper",
+  componentId: "sc-9aqeze-0"
+})(["", ""], ({
+  theme,
+  show
+}) => Object(external_styled_components_["css"])(["width:600px;position:fixed;margin:auto;background-color:rgba(0,0,0,0.3);width:100vw;height:100vh;z-index:15;img{width:100%;}", " align-items:center;justify-content:center;"], !show ? Object(external_styled_components_["css"])(["display:none;"]) : Object(external_styled_components_["css"])(["display:flex;"])));
+const styles_SubWrapper = external_styled_components_default.a.div.withConfig({
+  displayName: "styles__SubWrapper",
+  componentId: "sc-9aqeze-1"
+})(["", ""], ({
+  theme
+}) => Object(external_styled_components_["css"])(["box-shadow:0px 4px 4px rgba(0,0,0,0.25),0px 4px 4px rgba(0,0,0,0.25);background-color:", ";height:auto;width:100%;max-width:600px;display:flex;align-items:center;justify-content:flex-end;padding:", ";border-radius:", ";flex-direction:column;@media (max-width:", "){width:90%;}"], theme.colors.white100, theme.spacings.small, theme.border.radius.small, theme.breakPoints.mobileL));
+// CONCATENATED MODULE: ./src/components/SizesPopUp/index.tsx
+
+
+
+function SizesPopUp_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function SizesPopUp_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { SizesPopUp_ownKeys(Object(source), true).forEach(function (key) { SizesPopUp_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { SizesPopUp_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function SizesPopUp_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+const SizesPopUp = props => /*#__PURE__*/Object(jsx_runtime_["jsx"])(SizesPopUp_styles_Wrapper, SizesPopUp_objectSpread(SizesPopUp_objectSpread({}, props), {}, {
+  children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])(styles_SubWrapper, {
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+      className: "sizes-photo",
+      src: "/img/ProductPage/sizes.jpeg"
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Button["a" /* default */], {
+      onClick: props.onClose,
+      fontSize: "large",
+      children: "Beleza"
+    })]
+  })
+}));
+
+/* harmony default export */ var components_SizesPopUp = (SizesPopUp);
 // CONCATENATED MODULE: ./src/pages/produto/[slug].tsx
 
 
@@ -2675,6 +2717,7 @@ function _slug_ownKeys(object, enumerableOnly) { var keys = Object.keys(object);
 function _slug_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { _slug_ownKeys(Object(source), true).forEach(function (key) { _slug_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { _slug_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _slug_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -2779,6 +2822,10 @@ const Produto = ({
   const {
     0: showMiniCart,
     1: setShowMiniCart
+  } = Object(external_react_["useState"])(false);
+  const {
+    0: showSizes,
+    1: setShowSizes
   } = Object(external_react_["useState"])(false);
   Object(external_react_["useEffect"])(() => {
     // alert('Aloohhh')
@@ -2935,6 +2982,11 @@ const Produto = ({
         property: "og:image",
         content: "https://adm.jgemporiodamalha.com" || false
       })]
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_SizesPopUp, {
+      onClose: () => {
+        setShowSizes(false);
+      },
+      show: showSizes
     }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_SuccessAddPopUp, {
       show: showSuccess,
       onClose: () => setShowSuccess(false)
@@ -2974,7 +3026,7 @@ const Produto = ({
               }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("hr", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(ProductPrice, {
                 children: handlePrice["a" /* default */].priceNumberToReadblePrice(preco)
               }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(ProductInstallments, {
-                children: `ou então 3x de ${handlePrice["a" /* default */].priceNumberToReadblePrice(preco / 3)}`
+                children: `ou então 12x de ${handlePrice["a" /* default */].priceNumberToReadblePrice(preco / 12)}`
               }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(QuantTitle, {
                 children: "Quantidade"
               }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(QuantController["a" /* default */], {
@@ -3174,6 +3226,9 @@ const Produto = ({
                   })]
                 })]
               }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(ProductReference, {
+                onClick: () => {
+                  setShowSizes(true);
+                },
                 children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("u", {
                   children: "Tabela de medidas"
                 })
@@ -5708,7 +5763,7 @@ const ProductCard = ({
         }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(ProductPrice, {
           children: handlePrice["a" /* default */].priceNumberToReadblePrice(price ? price : 0)
         }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(Installments, {
-          children: `Ou então 3x de ${handlePrice["a" /* default */].priceNumberToReadblePrice((price ? price : 0) / 3)}`
+          children: `Ou então 12x de ${handlePrice["a" /* default */].priceNumberToReadblePrice((price ? price : 0) / 12)}`
         }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
           className: "cart-button",
           children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(CartButton, {
