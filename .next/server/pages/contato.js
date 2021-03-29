@@ -1187,9 +1187,11 @@ const Header = ({
   } = Object(external_react_["useState"])(nome_contains);
 
   const handleFilter = async () => {
+    const searchQuery = query;
+    delete searchQuery.slug;
     await push({
       pathname: '/loja',
-      query: _objectSpread(_objectSpread({}, query), {}, {
+      query: _objectSpread(_objectSpread({}, searchQuery), {}, {
         nome_contains: search
       })
     }); // reload()

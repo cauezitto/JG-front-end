@@ -33,10 +33,13 @@ const Header = ({ categorias = [] }: HeaderProps) => {
   const [search, setSearch] = useState(nome_contains)
 
   const handleFilter = async () => {
+    const searchQuery = query
+
+    delete searchQuery.slug
     await push({
       pathname: '/loja',
       query: {
-        ...query,
+        ...searchQuery,
         nome_contains: search
       }
     })

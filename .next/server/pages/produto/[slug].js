@@ -1240,9 +1240,11 @@ const Header = ({
   } = Object(external_react_["useState"])(nome_contains);
 
   const handleFilter = async () => {
+    const searchQuery = query;
+    delete searchQuery.slug;
     await push({
       pathname: '/loja',
-      query: _objectSpread(_objectSpread({}, query), {}, {
+      query: _objectSpread(_objectSpread({}, searchQuery), {}, {
         nome_contains: search
       })
     }); // reload()
@@ -2103,7 +2105,7 @@ const SizesWrapper = external_styled_components_default.a.div.withConfig({
   componentId: "sc-1m97gw6-9"
 })(["", ""], ({
   theme
-}) => Object(external_styled_components_["css"])(["margin-top:", ";display:flex;flex-wrap:wrap;@media (max-width:", "){justify-content:space-between;width:100%;}"], theme.spacings.medium, theme.breakPoints.tablet));
+}) => Object(external_styled_components_["css"])(["margin-top:", ";justify-content:space-around;display:flex;flex-wrap:wrap;@media (max-width:", "){justify-content:space-between;width:100%;}"], theme.spacings.medium, theme.breakPoints.tablet));
 const PersonalizationButtonSelector = external_styled_components_default.a.div.withConfig({
   displayName: "produto__PersonalizationButtonSelector",
   componentId: "sc-1m97gw6-10"
@@ -3171,6 +3173,10 @@ const Produto = ({
                     children: "* Este prazo de entrega est\xE1 considerando a encomenda do produto + prazo de entrega."
                   })]
                 })]
+              }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("br", {}), /*#__PURE__*/Object(jsx_runtime_["jsx"])(ProductReference, {
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("u", {
+                  children: "Tabela de medidas"
+                })
               })]
             })]
           })

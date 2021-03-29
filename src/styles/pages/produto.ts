@@ -143,7 +143,7 @@ export const QuantTitle = styled.span`
 export const SizesWrapper = styled.div`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.medium};
-    /* justify-content: flex-start; */
+    justify-content: space-around;
     display: flex;
     /* align-items: center; */
     /* float: right; */

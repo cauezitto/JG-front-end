@@ -42,6 +42,7 @@ import SuccessAddPopUp from 'components/SuccessAddPopUp'
 import MiniCart from 'components/MiniCart'
 import Head from 'next/head'
 import { ProductProps } from 'types/ProductProps'
+import SizesPopUp from 'components/SizesPopUp'
 
 type ProductPageProps = {
   tierList: ProductProps[]
@@ -309,6 +310,8 @@ const Produto = ({ product, categorias, tierList }: ProductPageProps) => {
           }
         />
       </Head>
+
+      {/* <SizesPopUp show={true} /> */}
       <SuccessAddPopUp
         show={showSuccess}
         onClose={() => setShowSuccess(false)}
@@ -659,6 +662,10 @@ const Produto = ({ product, categorias, tierList }: ProductPageProps) => {
                     </>
                   )}
                 </div>
+                <br />
+                <ProductReference>
+                  <u>Tabela de medidas</u>
+                </ProductReference>
               </ProductAside>
             </ProductSection>
           </HorizontalPaddingWrapper>
